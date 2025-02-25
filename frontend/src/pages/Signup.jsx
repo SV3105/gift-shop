@@ -28,7 +28,7 @@ const SignUp = () => {
           setUser(data.user)
           localStorage.setItem('token', data.token)
   
-          navigate('/home')
+          navigate('/')
         }
   
       setFirstname('')
