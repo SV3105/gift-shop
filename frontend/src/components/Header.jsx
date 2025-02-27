@@ -12,7 +12,7 @@ const Header = () => {
         <nav>
           <ul className="flex gap-10 text-lg">
             <li><Link to="/" className="hover:underline">Home</Link></li>
-            <li><Link to="/collections" className="hover:underline">Collections</Link></li>
+            <li><Link to="/collection" className="hover:underline">Collections</Link></li>
             <li><Link to="/checkout" className="hover:underline">Checkout</Link></li>
             <li><Link to="/contactus" className="hover:underline">Contact Us</Link></li>
             <li><Link to="/cart" className="relative">

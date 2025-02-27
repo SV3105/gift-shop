@@ -6,6 +6,7 @@ const app = express()
 const cors = require('cors')
 const connectToDB = require('./db/db')
 const userRoutes = require('./routes/user.routes')
+const customizerRoutes = require('./routes/customizer.route')
 
 const cookieParser = require('cookie-parser')
 
@@ -15,6 +16,8 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(cookieParser())
+app.use('/uploads', express.static('uploads'));
+
 
 app.get('/', (req, res) => {
     res.send('helooo')
@@ -22,5 +25,5 @@ app.get('/', (req, res) => {
 
 app.use('/user', userRoutes)
 
-
+app.use('/api/customizer', customizerRoutes);
 module.exports = app

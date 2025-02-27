@@ -6,7 +6,8 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Footer from './components/Footer'
 import Collections from './pages/Collections'
-import WeddingGiftsPage from "./pages/WeddingGiftsPage";
+import CategoryPage from "./pages/CategoryPage";
+import ProductPage from "./pages/ProductPage";
 
 const App = () => {
   return (
@@ -18,8 +19,9 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Home />} />
         <Route path="/collection" element={<Collections />} />
-        <Route path="/Customized-Wedding-Gifts" element={<WeddingGiftsPage />} />
-
+        <Route path="/category/:slug" element={<CategoryPage />} />
+        <Route path="/product/:id" element={<ProductPage />} />
+        <Route path="/cart" element={<div>Cart Page</div>} />
       </Routes>
       <Footer />
    
