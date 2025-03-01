@@ -8,21 +8,29 @@ import Footer from './components/Footer'
 import Collections from './pages/Collections'
 import CategoryPage from "./pages/CategoryPage";
 import ProductPage from "./pages/ProductPage";
+import Cart from './pages/Cart'
+import { CartProvider } from "./context/CartContext";
+import Checkout from "./pages/Checkout";
+import ContactUs from "./pages/Contactus";
 
 const App = () => {
   return (
     <>
       
       <Header />
+      <CartProvider>
       <Routes>
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/" element={<Home />} />
-        <Route path="/collection" element={<Collections />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/collections" element={<Collections />} />
         <Route path="/category/:slug" element={<CategoryPage />} />
         <Route path="/product/:id" element={<ProductPage />} />
-        <Route path="/cart" element={<div>Cart Page</div>} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/contactus" element={<ContactUs />} />
       </Routes>
+      </CartProvider>
       <Footer />
    
     </>
